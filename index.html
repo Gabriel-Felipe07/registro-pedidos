@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pedidos</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Registro de Pedidos</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Adicionar Pedido</h2>
+            <form id="orderForm">
+                <label for="clientName">Nome do Cliente:</label>
+                <input type="text" id="clientName" required>
+
+                <label for="paymentValue">Valor Pago:</label>
+                <input type="number" id="paymentValue" required>
+
+                <label for="deliveryDate">Data de Entrega:</label>
+                <input type="date" id="deliveryDate" required>
+
+                <label for="flavors">Sabores:</label>
+                <input type="text" id="flavors" required>
+
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" required>
+
+                <button type="submit">Cadastrar Pedido Fechado</button>
+            </form>
+        </section>
+
+        <section class="custom-order-section">
+            <h2>Pedido Personalizado</h2>
+            <form id="customOrderForm">
+                <label for="customClientName">Nome do Cliente:</label>
+                <input type="text" id="customClientName" required>
+
+                <label for="customPaymentValue">Valor Pago:</label>
+                <input type="number" id="customPaymentValue" required>
+
+                <label for="customDeliveryDate">Data de Entrega:</label>
+                <input type="date" id="customDeliveryDate" required>
+
+                <label for="customFlavors">Sabores (máximo 4):</label>
+                <input type="text" id="customFlavors" placeholder="Separe os sabores por vírgulas" required>
+
+                <button type="submit">Cadastrar Pedido Personalizado</button>
+            </form>
+        </section>
+
+        <section class="orders-section">
+            <h2>Pedidos Fechados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Valor</th>
+                        <th>Data de Entrega</th>
+                        <th>Sabores</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="closedOrdersTableBody">
+                    <!-- Pedidos Fechados -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="custom-orders-section">
+            <h2>Pedidos Personalizados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Valor</th>
+                        <th>Data de Entrega</th>
+                        <th>Sabores</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="customOrdersTableBody">
+                    <!-- Pedidos Personalizados -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
